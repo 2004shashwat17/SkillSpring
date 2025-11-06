@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+
+# Environment files (local keys)
+.env
+.env.local
+.env.*.local
+
+# Vite / build output
+dist/
+build/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor folders
+.vscode/
+
+# Optional: lockfile for other package managers
+pnpm-lock.yaml
+
+# Optional: local coverage
+coverage/
+
+# Ignore system files
+*.log
+
+# End of file

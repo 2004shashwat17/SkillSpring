@@ -1,0 +1,128 @@
+:root{
+  --bg:#ffffff;
+  --muted:#6e6e9a;
+  --accent:#6f6bdc;
+  --primary:#3b3b98;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:var(--bg);color:#111}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1100;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  min-height:72px;
+  box-shadow: 0 6px 20px rgba(12,18,30,0.04);
+}
+.header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0}
+.logo{font-weight:900;color:transparent;font-size:1.35rem;letter-spacing:0.2px;background:linear-gradient(90deg,#111,#ff9f1c);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo span{color:#ff9f1c}
+.center-logo{position:absolute;left:50%;transform:translateX(-50%)}
+.main-nav{display:flex;gap:1rem;align-items:center}
+.main-nav a{color:var(--primary);text-decoration:none;padding:8px 10px;border-radius:8px;transition:all .18s ease}
+.main-nav a:hover{background:rgba(99,102,241,0.08);transform:translateY(-2px);color:#2b2b7a}
+.btn-login{background:linear-gradient(90deg,#00c6ff,#0072ff);color:#fff;padding:8px 14px;border-radius:999px}
+.hero{padding:3rem 0}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-left{flex:1}
+.hero-right{flex:1;text-align:center}
+.hero img{max-width:100%;border-radius:8px}
+.lead{color:var(--muted);font-size:1.125rem}
+.btn{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.btn-outline{border:1px solid var(--accent);color:var(--accent);background:transparent}
+.main-content{min-height:60vh;padding-top:0;padding-bottom:2rem}
+.courses h2{margin-bottom:1rem}
+.grid{display:grid;gap:1rem}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.course-card{border:1px solid #eee;border-radius:8px;overflow:hidden;background:#fff}
+.course-card img{width:100%;height:160px;object-fit:cover}
+.card-body{padding:1rem}
+.muted{color:var(--muted)}
+.btn-link{display:inline-block;margin-top:.5rem;color:var(--accent)}
+.course-detail{display:flex;gap:2rem;align-items:flex-start;padding:1rem 0}
+.detail-left{flex:1}
+.detail-right{width:320px;border:1px solid #eee;padding:1rem;border-radius:8px}
+.demo-image{width:100%;border-radius:6px;margin-bottom:1rem}
+.contact{margin:0.5rem 0;color:var(--primary)}
+.btn.primary{background:var(--primary);color:#fff;border:none;padding:.6rem 1rem;border-radius:6px;cursor:pointer}
+.pricing label{display:inline-block;margin-right:1rem}
+.price{margin-top:.5rem;font-weight:700}
+.site-footer{background:#fff;border-top:1px solid #eee;padding:2rem 0;margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.copyright{text-align:center;padding:1rem 0;color:var(--muted)}
+.login .form{max-width:420px}
+.form input{display:block;width:100%;padding:.6rem;margin:0.5rem 0;border:1px solid #ddd;border-radius:6px}
+.form-actions{margin-top:1rem}
+
+/* stats banner */
+.stats-banner{background:linear-gradient(90deg,#5661e8,#7b6ff0);color:#fff;padding:2rem 0}
+.stats-inner{display:flex;gap:2rem;justify-content:space-between;align-items:center}
+.stat{flex:1;text-align:center}
+.stat-value{font-size:1.25rem;font-weight:800}
+.stat-label{font-size:.85rem;opacity:.9}
+
+.stat-value .counter{font-weight:900}
+
+/* always show plus sign after counters */
+.counter::after{content:'+';margin-left:6px;color:inherit;font-weight:700}
+
+/* typing effect */
+.lead-typing{font-size:1rem;color:var(--muted);margin:0.5rem 0}
+.typing .cursor{display:inline-block;margin-left:2px;opacity:1;animation:blink 1s infinite}
+@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+
+/* partners / logos */
+.partners{padding:3rem 0}
+.logos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.25rem;align-items:center;justify-items:center;margin-top:1rem}
+.logo-item img{max-width:100%;height:50px;object-fit:contain;filter:none;opacity:1;transition:filter .25s ease, opacity .25s ease}
+.logo-item img:hover{filter:grayscale(100%) brightness(0%);opacity:1}
+
+/* mission */
+.mission{padding:3rem 0}
+.mission-image img{width:100%;border-radius:6px}
+
+/* carousel styles for mission section */
+.carousel{position:relative;width:100%;height:420px;background:#ddd}
+.carousel img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-slide{position:absolute;inset:0;opacity:0;transform:translateX(10px);transition:opacity .8s ease, transform .8s ease}
+.carousel-slide.active{opacity:1;transform:translateX(0)}
+
+@media (max-width:800px){
+  .carousel{height:240px}
+}
+
+/* arrows */
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,0.55);color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:28px;line-height:1;box-shadow:0 6px 22px rgba(0,0,0,0.25);z-index:50}
+.carousel-arrow.left{left:12px}
+.carousel-arrow.right{right:12px}
+.carousel-arrow:hover{background:rgba(0,0,0,0.6)}
+
+/* dots */
+.carousel-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:50}
+.carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0}
+.carousel-dot.active{background:#fff;transform:scale(1.2)}
+
+/* chat bot */
+.chatbot{position:fixed;left:20px;bottom:20px;z-index:1200}
+.chatbot-toggle{width:56px;height:56px;border-radius:50%;background:var(--primary);color:#fff;border:none;box-shadow:0 6px 18px rgba(0,0,0,0.12);cursor:pointer;font-size:20px}
+.chatbot .chat-window{width:320px;height:420px;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.12);overflow:hidden;margin-bottom:8px}
+.chat-messages{padding:12px;display:flex;flex-direction:column;gap:8px;height:calc(100% - 56px);overflow:auto}
+.msg{max-width:85%}
+.msg.user{align-self:flex-end}
+.msg.bot{align-self:flex-start}
+.msg-text{padding:.6rem .8rem;border-radius:8px;background:#f1f3ff}
+.msg.user .msg-text{background:var(--primary);color:#fff}
+.chat-form{display:flex;gap:8px;padding:8px;border-top:1px solid #eee}
+.chat-form input{flex:1;padding:.5rem;border:1px solid #ddd;border-radius:6px}
+.chat-form .btn{padding:.4rem .7rem}
+
+/* small screens */
+@media (max-width:800px){
+  .hero-inner{flex-direction:column}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .course-detail{flex-direction:column}
+  .detail-right{width:100%}
+}
